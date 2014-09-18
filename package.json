@@ -1,0 +1,13 @@
+{
+    "id": "DLC",
+    "name": "DLC Mod",
+    "version": "0.5",
+    "author": "austenke",
+    "url": "",
+    "description": "This mod adds DLC to the game, for more information please read the topic.",
+    "main": "./main.js",
+    "dependencies": {
+        "gdt-modAPI": "0.1.x"
+    },
+    "image": "dlcmod_thumbnail-Thumbnail.png"
+}
