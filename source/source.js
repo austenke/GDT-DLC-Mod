@@ -6,7 +6,7 @@
 	    maxTriggers: 99999999999,
 	    trigger: function (company) {
 	    	a = GDT.getDataStore("DLC").data.rettts;
-			if (a != 1 && company.isGameProgressBetween(.7, .9)) return true;
+			if (a != 1 && company.isGameProgressBetween(.9, 1)) return true;
 	    },
 	    getNotification: function (company) {
 	    	GDT.getDataStore("DLC").data.rettts = 1;
@@ -52,7 +52,7 @@
 	    	var recentGame = GameManager.company.gameLog.last();
 	    	var daWeek = GameManager.company.getDate(GameManager.company.currentWeek).month;
 	    	var suWeek = GDT.getDataStore("DLC").data.daweek;
-			if (daWeek == suWeek && !company.isGameProgressBetween(0, 1) && a == 1) return true;
+			if (daWeek == suWeek && a == 1) return true;
 	    },
 	    getNotification: function (company) {
 	    	var gName = GameManager.company.gameLog.last().title;
@@ -92,8 +92,8 @@
          
     UI.SellShares = function (a) {
     	daWeek = GameManager.company.getDate(GameManager.company.currentWeek).month;
-    	if (daWeek > 9) daWeek = 0;
-    	GDT.getDataStore("DLC").data.daweek = daWeek + 3;
+    	if (daWeek > 10) daWeek = 0;
+    	GDT.getDataStore("DLC").data.daweek = daWeek + 2;
         Sound.click();
         switch (a.id) {
             case "dlc1":

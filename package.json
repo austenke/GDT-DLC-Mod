@@ -4,7 +4,7 @@
     "version": "0.5",
     "author": "austenke",
     "url": "",
-    "description": "This mod adds DLC to the game, for more information please read the topic.",
+    "description": "Ever wanted to add DLC to your games? Now you can! Check out the Steam Workshop or Greenheart Games forum for more information",
     "main": "./main.js",
     "dependencies": {
         "gdt-modAPI": "0.1.x"
