@@ -19,8 +19,8 @@
         	})
         },
 	    complete: function (decision) {
-
 	        if (decision === 0) {
+	        	GDT.getDataStore("DLC").data.gamm = GameManager.company.currentGame;
 	            Sound.click();
 	            GameManager.resume(false);
 	            var div = $("#DLCwindow");
@@ -55,9 +55,10 @@
 			if (daWeek == suWeek && a == 1) return true;
 	    },
 	    getNotification: function (company) {
-	    	var gName = GameManager.company.gameLog.last().title;
-	    	var gScore = GameManager.company.gameLog.last().score;
-	    	var uSold = GameManager.company.gameLog.last().unitsSold;
+	  		a = GDT.getDataStore("DLC").data.gamm
+	    	var gName = a.title;
+	    	var gScore = a.score;
+	    	var uSold = a.unitsSold;
 	    	var f = GDT.getDataStore("DLC").data.sellam;
 	    	var moneyMade = f * uSold;
 	    	GDT.getDataStore("DLC").data.rettts = 0;
@@ -83,13 +84,11 @@
 	GDT.addEvent(askDLC);
 	GDT.addEvent(getCash);
 
-
 //=============================================================================================================================================================
 //=============================================================================================================================================================
 //=============================================================================================================================================================
 //=============================================================================================================================================================
 
-         
     UI.SellShares = function (a) {
     	daWeek = GameManager.company.getDate(GameManager.company.currentWeek).month;
     	if (daWeek > 10) daWeek = 0;
